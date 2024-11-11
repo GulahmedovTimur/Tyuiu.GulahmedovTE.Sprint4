@@ -8,7 +8,6 @@ namespace Tyuiu.GulahmedovTE.Sprint4.Task0.V11.Test
         public void ValidGetMultOddArrEl()
         {
             DataService ds = new DataService();
-
             int[] numsArray = { 8, 9, 5, 4, 3, 2, 1, 0, 5, 7 };
             int res = ds.GetMultOddArrEl(numsArray);
             int wait = 4725;

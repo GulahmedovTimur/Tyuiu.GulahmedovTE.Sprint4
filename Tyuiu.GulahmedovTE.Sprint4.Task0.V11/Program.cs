@@ -16,8 +16,6 @@ namespace Tyuiu.GulahmedovTE.Sprint4.Task0.V11
             {
                 Console.WriteLine(numsArray[i] + "\t");
             }
-
-
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬАТ:                                                               *");
             Console.WriteLine("***************************************************************************");
