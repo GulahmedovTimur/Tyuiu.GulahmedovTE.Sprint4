@@ -8,14 +8,16 @@ namespace Tyuiu.GulahmedovTE.Sprint4.Task5.V13.Lib
             int rows = matrix.GetUpperBound(0) + 1;
             int columns = matrix.Length / rows;
 
-
             for (int i = 0; i < rows; i++)
+            {
                 for (int j = 0; j < columns; j++)
+                {
                     if (matrix[i, j] < 0)
                     {
                         matrix[i, j] = 0;
                     }
-
+                }
+            }
             return matrix;
         }
     }

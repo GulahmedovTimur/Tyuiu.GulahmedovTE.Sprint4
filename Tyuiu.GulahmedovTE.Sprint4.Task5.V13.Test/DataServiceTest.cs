@@ -5,23 +5,16 @@ namespace Tyuiu.GulahmedovTE.Sprint4.Task5.V13.Test
     public class DataServiceTest
     {
         [TestMethod]
-        public void TestMethod1()
+        public void ValidCalculate()
         {
+
             DataService ds = new DataService();
+            int[,] mas2 = new int[3, 3] { { 1, -5, 4 }, { -3, 6, 8 }, { -1, -7, -8 } };
+            int[,] res = ds.Calculate(mas2);
+            int[,] wait = new int[3, 3] { { 1, 0, 4 }, { 0, 6, 8 }, { 0, 0, 0 } };
 
-            int[,] matrix = new int[5, 5] { { 0, 0, 0, 0, -9 },
-                                            { -7, 0, 0, 0, -9 },
-                                            { 0, -7, -9, 0, -5 },
-                                            { -7, -5, -7, -7, 0 },
-                                            { 0, 0, 0, -7, -9 } };
-            int[,] res = ds.Calculate(matrix);
-
-            int[,] wait = new int[5, 5] { { 0, 0, 0, 0, 0 },
-                                          { 0, 0, 0, 0, 0 },
-                                          { 0, 0, 0, 0, 0 },
-                                          { 0, 0, 0, 0, 0 },
-                                          { 0, 0, 0, 0, 0 } }; ;
             CollectionAssert.AreEqual(wait, res);
+
         }
     }
 }
