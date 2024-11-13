@@ -1,59 +1,47 @@
 ﻿using Tyuiu.GulahmedovTE.Sprint4.Task5.V13.Lib;
 namespace Tyuiu.GulahmedovTE.Sprint4.Task5.V13
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
-            Console.WriteLine("***************************************************************************");
-
             DataService ds = new DataService();
+            Random rnd = new Random();
+            Console.WriteLine("******************************************************************************");
+            Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                           *");
+            Console.WriteLine("******************************************************************************");
 
-            Console.WriteLine("Введите количество строк в массиве: ");
+            Console.WriteLine("Введите коллво строк в массиве : ");
             int rows = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Введите количество столбцов в массиве: ");
-            int columns = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("***************************************************************************");
 
-            int[,] matrix = new int[rows, columns];
+            Console.WriteLine("Введите коллво столбцов в массиве : ");
+            int col = Convert.ToInt32(Console.ReadLine());
+
+
+            int[,] mtrx = new int[rows, col];
+
+            Console.WriteLine("******************************************************************************");
 
             for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < rows; j++)
                 {
-                    matrix[i, j] = rnd.Next(-2, 5);
+                    mtrx[i, j] = rnd.Next(-2, 5);
                 }
-            }
 
-            Console.WriteLine("\nМассив:");
+            Console.WriteLine("\nМассив");
             for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
+                for (int j = 0; j < col; j++)
                 {
-                    Console.Write($"{matrix[i, j]} \t");
+                    Console.WriteLine($"{mtrx[i, j]} \t");
                 }
-                Console.WriteLine();
-
-            }
             Console.WriteLine();
 
-            Console.WriteLine("***************************************************************************");
-            Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
-            Console.WriteLine("***************************************************************************");
+            Console.WriteLine();
+            Console.WriteLine("******************************************************************************");
+            Console.WriteLine("* Результат:                                                                 *");
+            Console.WriteLine("******************************************************************************");
 
-            int[,] res = ds.Calculate(matrix);
-
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
-                {
-                    Console.Write($"{res[i, j]} \t");
-                }
-                Console.WriteLine();
-            }
+            Console.WriteLine("zxc " + ds.Calculate(mtrx));
             Console.ReadKey();
         }
     }

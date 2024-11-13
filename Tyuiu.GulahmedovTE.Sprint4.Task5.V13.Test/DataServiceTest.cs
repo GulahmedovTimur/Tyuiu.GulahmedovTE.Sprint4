@@ -9,11 +9,18 @@ namespace Tyuiu.GulahmedovTE.Sprint4.Task5.V13.Test
         {
             DataService ds = new DataService();
 
-            int[,] matrix = new int[,] { { -1, -1, -1 }, { 1, 4, 2 }, { -2, 1, 3 } };
-
+            int[,] matrix = new int[5, 5] { { 0, 0, 0, 0, -9 },
+                                            { -7, 0, 0, 0, -9 },
+                                            { 0, -7, -9, 0, -5 },
+                                            { -7, -5, -7, -7, 0 },
+                                            { 0, 0, 0, -7, -9 } };
             int[,] res = ds.Calculate(matrix);
-            int[,] wait = new int[,] { { 0, 0, 0 }, { 1, 4, 2 }, { 0, 1, 3 } };
 
+            int[,] wait = new int[5, 5] { { 0, 0, 0, 0, 0 },
+                                          { 0, 0, 0, 0, 0 },
+                                          { 0, 0, 0, 0, 0 },
+                                          { 0, 0, 0, 0, 0 },
+                                          { 0, 0, 0, 0, 0 } }; ;
             CollectionAssert.AreEqual(wait, res);
         }
     }
