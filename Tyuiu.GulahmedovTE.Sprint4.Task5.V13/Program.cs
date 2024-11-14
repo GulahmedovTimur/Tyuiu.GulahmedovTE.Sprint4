@@ -1,7 +1,7 @@
 ﻿using Tyuiu.GulahmedovTE.Sprint4.Task5.V13.Lib;
 namespace Tyuiu.GulahmedovTE.Sprint4.Task5.V13
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
